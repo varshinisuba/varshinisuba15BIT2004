@@ -1,0 +1,42 @@
+import java.util.*;
+public class Hello 
+{
+
+    public static void main(String[] args) 
+    {
+        Scanner  sc= new Scanner(System.in);
+        String s=sc.next();
+        char a[]=s.toCharArray();
+        int len=a.length;
+        int i=0,c=0,c1=0,c2=0,c3=0;
+        if(len<=25 && len>=8)
+        {
+            for(i=0;i<len;i++)
+            {
+                if(a[i]=='#'||a[i]=='!'||a[i]=='_'||a[i]=='$'||a[i]=='@')
+                c++;
+                else if(a[i]>='a'&& a[i]<='z')
+                c1++;
+                else if(a[i]>='A'&& a[i]<='Z')
+                c2++;
+                else if(a[i]>='0'&& a[i]<='9')
+                c3++;
+            }
+        
+        if(c3>=2 && c>=1 && c1>=1 && c2>=1)
+        {
+          System.out.print("VALID");
+        }
+        else
+        {
+          System.out.print("INVALID");
+        }
+      }
+       else
+       {
+          System.out.println("INVALID");
+       }
+        
+    }
+
+}

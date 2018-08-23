@@ -1,0 +1,32 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+        //Your Code Here
+        Scanner ss=new Scanner(System.in);
+        String s=ss.nextLine();
+        char c[]=s.toCharArray();
+        HashMap<Character,Integer> h=new HashMap<Character,Integer>();
+        for(char x:c)
+        {
+            if(h.containsKey(x))
+            {
+                h.put(x,h.get(x)+1);
+                
+            }
+            else
+            {
+                h.put(x,1);
+            }
+        }
+        for(char x:c)
+        {
+            if(h.get(x)>1)
+            {
+                System.out.println(x);
+                break;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,63 @@
+ 
+import java.util.*;
+public class main{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+String num=sc.nextLine();
+int n=num.length();
+int odd=0,even=0;
+char arr[]=num.toCharArray();
+if(n%2==0)
+{
+for(int i=0;i<n;i=i+2)
+{
+odd+=Integer.parseInt(Character.toString(arr[i]));
+}
+for(int j=1;j<n;j=j+1)
+{
+even+=Integer.parseInt(Character.toString(arr[j]));
+}
+System.out.println("odd");
+System.out.println("even");
+}
+else
+{
+System.out.print("NotAccepted");
+}
+}
+}mport java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner ss=new Scanner(System.in);
+		String s1=ss.nextLine();
+		int count[]=new int[256];
+		int len=s1.length();
+		for(int i=0;i<len;i++)
+		{
+		    count[s1.charAt(i)]++;
+		}
+		char ch[]=new char[s1.length()];
+		for(int i=0;i<len;i++)
+		{
+		    ch[i]=s1.charAt(i);
+		    int find=0;
+		    for(int j=0;j<=i;j++)
+		    {
+		        if(s1.charAt(i)==ch[j])
+		        {
+		            find++;
+		        }
+		    }
+		        if(find==1)
+		        {
+		           System.out.println(s1.charAt(i)+""+count[s1.charAt(i)]); 
+		        }
+		    
+		}
+		
+
+	}
+}
