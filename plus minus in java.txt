@@ -1,0 +1,19 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+            int num=obj.nextInt();
+        double p=0,n=0,z=0;
+        for(int i=0;i<num;i++)
+        {
+            int data=obj.nextInt();
+            p+=data>0?1:0;
+            n+=data<0?1:0;
+            z+=data==0?1:0;
+        }
+        System.out.println(p/num);
+         System.out.println(n/num);
+         System.out.println(z/num);
+    }
+}
