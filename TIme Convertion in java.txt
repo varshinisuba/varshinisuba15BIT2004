@@ -1,0 +1,33 @@
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner obj=new Scanner(System.in);
+        String s1=obj.next();
+        String arr[]=s1.split(":");
+        String hour=arr[0];
+        String min=arr[1];
+        String second=arr[2].substring(0,2);
+        String output=arr[2].substring(2,4);
+        if(output.equals("AM"))
+        {
+            if(hour.equals("12"))
+                    hour="00";
+                System.out.println(hour+":"+min+":"+second);
+                }
+                 else
+                    {
+                        if(!hour.equals("12"))
+                        {
+                            int h=Integer.parseInt(hour);
+                            h=h+12;
+                            hour=""+h;
+                        }
+                         System.out.println(hour+":"+min+":"+second);
+                            
+                    }
+                    
+        
+    }
+}
