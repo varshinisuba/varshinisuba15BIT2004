@@ -1,0 +1,33 @@
+import java.util.*;
+
+public class Main {
+ 
+   public static void main(String args[]) {
+
+        Scanner obj=new Scanner(System.in);
+ 
+       int num=obj.nextInt();
+     
+   int reverse=0;
+   
+     while(num!=0)
+      
+  {
+     
+    //reverse = reverse * 10;
+
+          reverse = reverse + num%10;
+  
+        reverse = reverse * 10;
+   
+       num = num/10;
+  
+        
+ 
+        }
+     
+   System.out.println(reverse);
+ 
+   }
+
+}
