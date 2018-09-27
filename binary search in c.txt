@@ -1,0 +1,55 @@
+#include<stdio.h>
+
+ 
+int main()
+  
+ {
+
+int ctr,n,arr[100],search;
+
+scanf("%d",&n);
+
+for(ctr=0;ctr<n;ctr++)
+
+{
+  
+  scanf("%d",&arr[ctr]);
+
+}
+
+scanf("%d",&search);
+
+for(ctr=0;ctr<n;++ctr)
+
+{
+
+    if(search==arr[ctr])
+
+    {
+ 
+      break;
+   
+ }
+
+
+}
+
+    if(ctr<n)
+   
+ {
+
+        printf("element found in the place:%d",ctr+1);
+   
+ }
+
+    else
+
+    {
+
+        printf("not");
+  
+  }
+
+}
+
+
